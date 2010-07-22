@@ -1,7 +1,7 @@
 import java.util.regex.Matcher
 
 class OCUnitReportConverter {
-    final String LINE_BREAK = "\r\n"
+    final String LINE_BREAK = System.getProperty("line.separator")
 
     def parse(String ocunitOutput) {
        

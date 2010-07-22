@@ -20,4 +20,10 @@ class OCUnitReportConverterTest extends GroovyTestCase {
         assertEquals 1, result.testSuites[0].numberOfFailures
         assertEquals 0, result.testSuites[1].numberOfFailures
     }
+
+	void testShouldDefaultErrorCountToZeroUntilIFigureItOut() {
+		def result = converter.parse(outputTwoSuitesOneFail)
+		assertEquals 0, result.testSuites[0].numberOfErrors
+		assertEquals 0, result.testSuites[1].numberOfErrors
+	}
 }
