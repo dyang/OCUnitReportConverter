@@ -5,4 +5,5 @@ class TestSuite {
 	def numberOfTests = -1
 	def numberOfFailures = -1
 	def numberOfErrors = -1
+	def testCases = []
 }
