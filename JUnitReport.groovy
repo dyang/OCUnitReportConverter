@@ -1,0 +1,3 @@
+class JUnitReport {
+    int numOfTestSuites
+}
