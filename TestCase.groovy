@@ -1,3 +1,3 @@
 class TestCase {
-	def name
+	def name, time
 }

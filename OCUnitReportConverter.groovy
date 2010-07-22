@@ -8,7 +8,7 @@ class OCUnitReportConverter {
         def testSuites = []
         def expSuite = /^Test Suite '([^']+)' started at (.*)/
         def expTestCount = /^Executed ([\d]+) tests, with ([\d]+) failure[s]? \([\d]+ unexpected\) in [\S]+ \(([^\)]+)\).*/
-        def expTestCase = /^Test Case '-[\S]+ ([^\]]+).*/
+        def expTestCase = /^Test Case '-[\S]+ ([^\]]+)[^\(]*\(([\S]*) seconds\).*/
         
         ocunitOutput.split(LINE_BREAK).each {
             switch (it) {
@@ -29,7 +29,7 @@ class OCUnitReportConverter {
                     break
 				case ~expTestCase:
 					def matcher = Matcher.getLastMatcher()
-					testSuites[-1].testCases << new TestCase(name: matcher[0][1])
+					testSuites[-1].testCases << new TestCase(name: matcher[0][1], time: matcher[0][2] as float)
 					break
             }        
         }

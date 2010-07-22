@@ -57,4 +57,15 @@ class OCUnitReportConverterTest extends GroovyTestCase {
 		assertEquals "testNumber", result.testSuites[1].testCases[0].name
 		assertEquals "testString", result.testSuites[1].testCases[1].name
 	}
+	
+	void testShouldParseTestCaseExecutionTime() {
+		def result = converter.parse(outputTwoSuitesOneFail)
+		assertEquals 0.000f, result.testSuites[0].testCases[0].time
+		assertEquals 0.002f, result.testSuites[0].testCases[1].time
+		assertEquals 0.001f, result.testSuites[0].testCases[2].time
+		assertEquals 0.000f, result.testSuites[0].testCases[3].time
+
+		assertEquals 0.010f, result.testSuites[1].testCases[0].time
+		assertEquals 0.020f, result.testSuites[1].testCases[1].time
+	}
 }

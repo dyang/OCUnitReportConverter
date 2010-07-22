@@ -290,8 +290,8 @@ Test Suite '/Users/dyang/Workspace/TestApp/build/Debug-iphonesimulator/UnitTests
 Test Suite 'DummyTests' started at 2010-07-21 23:46:58 +0800
 /Users/dyang/Workspace/TestApp/DummyTests.m:21: error: -[DummyTests testFail] : Fail me
 Test Case '-[DummyTests testFail]' failed (0.000 seconds).
-Test Case '-[DummyTests testNumber]' passed (0.000 seconds).
-Test Case '-[DummyTests testString]' passed (0.000 seconds).
+Test Case '-[DummyTests testNumber]' passed (0.002 seconds).
+Test Case '-[DummyTests testString]' passed (0.001 seconds).
 Test Case '-[DummyTests testStringLength]' passed (0.000 seconds).
 Test Suite 'DummyTests' finished at 2010-07-21 23:46:58 +0800.
 tests_errors[0]
@@ -301,8 +301,8 @@ tests_errors[1]
 Executed 4 tests, with 1 failure (0 unexpected) in 0.000 (0.001) seconds
 
 Test Suite 'SimpleTests' started at 2010-07-21 23:46:58 +0800
-Test Case '-[SimpleTests testNumber]' passed (0.000 seconds).
-Test Case '-[SimpleTests testString]' passed (0.000 seconds).
+Test Case '-[SimpleTests testNumber]' passed (0.010 seconds).
+Test Case '-[SimpleTests testString]' passed (0.020 seconds).
 Test Suite 'SimpleTests' finished at 2010-07-21 23:46:58 +0800.
 Executed 2 tests, with 0 failures (0 unexpected) in 0.000 (0.000) seconds
 
