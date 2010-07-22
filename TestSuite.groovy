@@ -1,7 +1,8 @@
 class TestSuite {
     def name
     def timestamp
-	int numberOfTests = -1
-	int numberOfFailures = -1
-	int numberOfErrors = 0
+	def time = -1
+	def numberOfTests = -1
+	def numberOfFailures = -1
+	def numberOfErrors = -1
 }
