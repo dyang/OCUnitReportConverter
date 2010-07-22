@@ -8,10 +8,10 @@ class OCUnitReportConverter {
         ocunitOutput.split(LINE_BREAK).each {
             def matcher = (it =~ expSuite)
             if (matcher.matches())
-                testSuites << matcher[0][1]
+                testSuites << new TestSuite(name: matcher[0][1])
         }
         // remove the first element since we don't need that one
         testSuites.remove(0)
-        new JUnitReport(numOfTestSuites: testSuites.size)
+        new JUnitReport(testSuites)
     }    
 }

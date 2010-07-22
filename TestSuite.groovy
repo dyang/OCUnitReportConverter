@@ -1,0 +1,3 @@
+class TestSuite {
+    def name
+}
