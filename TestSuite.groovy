@@ -1,5 +1,4 @@
 class TestSuite {
     def name
-    def numberOfFailures = -1
-	def numberOfErrors = 0
+    int numberOfFailures = -1, numberOfErrors, numberOfTests
 }

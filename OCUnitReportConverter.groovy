@@ -7,7 +7,7 @@ class OCUnitReportConverter {
        
         def testSuites = []
         def expSuite = /^Test Suite '([^']+)' started.*/
-        def expFailureCount = /^Executed [\d]+ tests, with ([\d]+) failure.*/
+        def expFailureCount = /^Executed ([\d]+) tests, with ([\d]+) failure.*/
         
         ocunitOutput.split(LINE_BREAK).each {
             switch (it) {
@@ -17,8 +17,11 @@ class OCUnitReportConverter {
                 case ~expFailureCount:
                     // Use -1 as the flag to skip the very last failure count (which 
                     // we don't need)
-                    if (testSuites[-1].numberOfFailures == -1)
-                        testSuites[-1].numberOfFailures = Matcher.getLastMatcher()[0][1] as int
+                    if (testSuites[-1].numberOfFailures == -1) {
+						def matcher = Matcher.getLastMatcher()
+                        testSuites[-1].numberOfTests = matcher[0][1] as int
+						testSuites[-1].numberOfFailures = matcher[0][2] as int
+					}
                     break                
             }        
         }
