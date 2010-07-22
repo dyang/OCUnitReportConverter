@@ -6,13 +6,14 @@ class OCUnitReportConverter {
     def parse(String ocunitOutput) {
        
         def testSuites = []
-        def expSuite = /^Test Suite '([^']+)' started.*/
+        def expSuite = /^Test Suite '([^']+)' started at (.*)/
         def expTestCount = /^Executed ([\d]+) tests, with ([\d]+) failure.*/
         
         ocunitOutput.split(LINE_BREAK).each {
             switch (it) {
                 case ~expSuite:
-                    testSuites << new TestSuite(name: Matcher.getLastMatcher()[0][1])
+					def matcher = Matcher.getLastMatcher()
+                    testSuites << new TestSuite(name: matcher[0][1], timestamp: matcher[0][2])
                     break
                 case ~expTestCount:
                     // Use -1 as the flag to skip the very last test/failure count (which we don't need)

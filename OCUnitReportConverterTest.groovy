@@ -32,4 +32,10 @@ class OCUnitReportConverterTest extends GroovyTestCase {
 		assertEquals 4, result.testSuites[0].numberOfTests
 		assertEquals 2, result.testSuites[1].numberOfTests
 	}
+	
+	void testShouldParseTimestamp() {
+		def result = converter.parse(outputTwoSuitesOneFail)
+		assertEquals "2010-07-21 23:46:58 +0800", result.testSuites[0].timestamp
+		assertEquals "2010-07-21 23:46:58 +0800", result.testSuites[1].timestamp
+	}
 }
