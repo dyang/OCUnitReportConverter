@@ -2,10 +2,12 @@ class OCUnitReportConverterTest extends GroovyTestCase {
     
     def converter
     String outputTwoSuitesOneFail
+	String outputTwoSuitesTwoFail
     
     void setUp() {
         converter = new OCUnitReportConverter()
         outputTwoSuitesOneFail = new File("data/output-f-1.log").text
+        outputTwoSuitesTwoFail = new File("data/output-f-2.log").text
     }
        
     void testShouldParseTestSuiteName() {
@@ -67,5 +69,17 @@ class OCUnitReportConverterTest extends GroovyTestCase {
 
 		assertEquals 0.010f, result.testSuites[1].testCases[0].time
 		assertEquals 0.020f, result.testSuites[1].testCases[1].time
+	}
+
+	void testShouldParseTestFailures() {
+		def result = converter.parse(outputTwoSuitesTwoFail)
+		assertEquals false, result.testSuites[0].testCases[0].passed
+		assertEquals true, result.testSuites[0].testCases[1].passed
+		assertEquals true, result.testSuites[0].testCases[2].passed
+		assertEquals true, result.testSuites[0].testCases[3].passed
+		assertEquals false, result.testSuites[0].testCases[4].passed
+
+		assertEquals true, result.testSuites[1].testCases[0].passed
+		assertEquals true, result.testSuites[1].testCases[1].passed
 	}
 }
