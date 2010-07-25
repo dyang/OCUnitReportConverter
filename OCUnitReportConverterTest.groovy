@@ -5,7 +5,7 @@ class OCUnitReportConverterTest extends GroovyTestCase {
     
     void setUp() {
         converter = new OCUnitReportConverter()
-        outputTwoSuitesOneFail = new File("data/output-f-2.log").text
+        outputTwoSuitesOneFail = new File("data/output-f-1.log").text
     }
        
     void testShouldParseTestSuiteName() {

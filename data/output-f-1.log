@@ -2,30 +2,8 @@
 
 Checking Dependencies...
 
-Processing "/Applications/Cruise Agent.app/pipelines/TestApp/build/Debug-iphonesimulator/UnitTests.octest/Info.plist" UnitTests-Info.plist
-    mkdir "/Applications/Cruise Agent.app/pipelines/TestApp/build/Debug-iphonesimulator/UnitTests.octest"
-    cd "/Applications/Cruise Agent.app/pipelines/TestApp"
-    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"
-    <com.apple.tools.info-plist-utility> UnitTests-Info.plist -expandbuildsettings -format binary -o "/Applications/Cruise Agent.app/pipelines/TestApp/build/Debug-iphonesimulator/UnitTests.octest/Info.plist"
-
-CompileC build/TestApp.build/Debug-iphonesimulator/UnitTests.build/Objects-normal/i386/DummyTests.o "/Applications/Cruise Agent.app/pipelines/TestApp/DummyTests.m" normal i386 objective-c com.apple.compilers.gcc.4_2
-    cd "/Applications/Cruise Agent.app/pipelines/TestApp"
-    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"
-    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -D__IPHONE_OS_VERSION_MIN_REQUIRED=30000 -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.1.2.sdk -mmacosx-version-min=10.5 -gdwarf-2 -iquote "/Applications/Cruise Agent.app/pipelines/TestApp/build/TestApp.build/Debug-iphonesimulator/UnitTests.build/UnitTests-generated-files.hmap" "-I/Applications/Cruise Agent.app/pipelines/TestApp/build/TestApp.build/Debug-iphonesimulator/UnitTests.build/UnitTests-own-target-headers.hmap" "-I/Applications/Cruise Agent.app/pipelines/TestApp/build/TestApp.build/Debug-iphonesimulator/UnitTests.build/UnitTests-all-target-headers.hmap" -iquote "/Applications/Cruise Agent.app/pipelines/TestApp/build/TestApp.build/Debug-iphonesimulator/UnitTests.build/UnitTests-project-headers.hmap" "-F/Applications/Cruise Agent.app/pipelines/TestApp/build/Debug-iphonesimulator" -F/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.1.2.sdk/Developer/Library/Frameworks -F/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.1.2.sdk/Developer/Library/Frameworks "-I/Applications/Cruise Agent.app/pipelines/TestApp/build/Debug-iphonesimulator/include" "-I/Applications/Cruise Agent.app/pipelines/TestApp/build/TestApp.build/Debug-iphonesimulator/UnitTests.build/DerivedSources/i386" "-I/Applications/Cruise Agent.app/pipelines/TestApp/build/TestApp.build/Debug-iphonesimulator/UnitTests.build/DerivedSources" -c "/Applications/Cruise Agent.app/pipelines/TestApp/DummyTests.m" -o "/Applications/Cruise Agent.app/pipelines/TestApp/build/TestApp.build/Debug-iphonesimulator/UnitTests.build/Objects-normal/i386/DummyTests.o"
-
-Ld "/Applications/Cruise Agent.app/pipelines/TestApp/build/Debug-iphonesimulator/UnitTests.octest/UnitTests" normal i386
-    cd "/Applications/Cruise Agent.app/pipelines/TestApp"
-    setenv MACOSX_DEPLOYMENT_TARGET 10.5
-    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"
-    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -arch i386 -bundle -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.1.2.sdk "-L/Applications/Cruise Agent.app/pipelines/TestApp/build/Debug-iphonesimulator" "-F/Applications/Cruise Agent.app/pipelines/TestApp/build/Debug-iphonesimulator" -F/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.1.2.sdk/Developer/Library/Frameworks -F/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.1.2.sdk/Developer/Library/Frameworks -filelist "/Applications/Cruise Agent.app/pipelines/TestApp/build/TestApp.build/Debug-iphonesimulator/UnitTests.build/Objects-normal/i386/UnitTests.LinkFileList" -mmacosx-version-min=10.5 -framework Foundation -framework SenTestingKit -framework UIKit -o "/Applications/Cruise Agent.app/pipelines/TestApp/build/Debug-iphonesimulator/UnitTests.octest/UnitTests"
-
-GenerateDSYMFile "/Applications/Cruise Agent.app/pipelines/TestApp/build/Debug-iphonesimulator/UnitTests.octest.dSYM" "/Applications/Cruise Agent.app/pipelines/TestApp/build/Debug-iphonesimulator/UnitTests.octest/UnitTests"
-    cd "/Applications/Cruise Agent.app/pipelines/TestApp"
-    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"
-    /Developer/usr/bin/dsymutil "/Applications/Cruise Agent.app/pipelines/TestApp/build/Debug-iphonesimulator/UnitTests.octest/UnitTests" -o "/Applications/Cruise Agent.app/pipelines/TestApp/build/Debug-iphonesimulator/UnitTests.octest.dSYM"
-
-PhaseScriptExecution "/Applications/Cruise Agent.app/pipelines/TestApp/build/TestApp.build/Debug-iphonesimulator/UnitTests.build/Script-E63CBCAC11F714E800E644C0.sh"
-    cd "/Applications/Cruise Agent.app/pipelines/TestApp"
+PhaseScriptExecution /Users/dyang/Workspace/TestApp/build/TestApp.build/Debug-iphonesimulator/UnitTests.build/Script-E63CBCAC11F714E800E644C0.sh
+    cd /Users/dyang/Workspace/TestApp
     setenv ACTION build
     setenv ALTERNATE_GROUP staff
     setenv ALTERNATE_MODE u+w,go-w,a+rX
@@ -41,24 +19,24 @@ PhaseScriptExecution "/Applications/Cruise Agent.app/pipelines/TestApp/build/Tes
     setenv ARCHS_STANDARD_32_BIT i386
     setenv ARCHS_UNIVERSAL_IPHONE_OS i386
     setenv BUILD_COMPONENTS "headers build"
-    setenv BUILD_DIR "/Applications/Cruise Agent.app/pipelines/TestApp/build"
-    setenv BUILD_ROOT "/Applications/Cruise Agent.app/pipelines/TestApp/build"
+    setenv BUILD_DIR /Users/dyang/Workspace/TestApp/build
+    setenv BUILD_ROOT /Users/dyang/Workspace/TestApp/build
     setenv BUILD_STYLE Debug
     setenv BUILD_VARIANTS normal
-    setenv BUILT_PRODUCTS_DIR "/Applications/Cruise Agent.app/pipelines/TestApp/build/Debug-iphonesimulator"
+    setenv BUILT_PRODUCTS_DIR /Users/dyang/Workspace/TestApp/build/Debug-iphonesimulator
     setenv CACHE_ROOT /var/folders/Qw/QwcNQu74FcKZavbIZYNLcE+++TI/-Caches-/com.apple.Xcode.501
     setenv CCHROOT /var/folders/Qw/QwcNQu74FcKZavbIZYNLcE+++TI/-Caches-/com.apple.Xcode.501
     setenv CHMOD /bin/chmod
     setenv CHOWN /usr/sbin/chown
-    setenv CLASS_FILE_DIR "/Applications/Cruise Agent.app/pipelines/TestApp/build/TestApp.build/Debug-iphonesimulator/UnitTests.build/JavaClasses"
+    setenv CLASS_FILE_DIR /Users/dyang/Workspace/TestApp/build/TestApp.build/Debug-iphonesimulator/UnitTests.build/JavaClasses
     setenv CLEAN_PRECOMPS YES
     setenv CLONE_HEADERS NO
     setenv COMMAND_MODE legacy
     setenv COMPOSITE_SDK_DIRS /var/folders/Qw/QwcNQu74FcKZavbIZYNLcE+++TI/-Caches-/com.apple.Xcode.501/CompositeSDKs
     setenv COMPRESS_PNG_FILES YES
     setenv CONFIGURATION Debug
-    setenv CONFIGURATION_BUILD_DIR "/Applications/Cruise Agent.app/pipelines/TestApp/build/Debug-iphonesimulator"
-    setenv CONFIGURATION_TEMP_DIR "/Applications/Cruise Agent.app/pipelines/TestApp/build/TestApp.build/Debug-iphonesimulator"
+    setenv CONFIGURATION_BUILD_DIR /Users/dyang/Workspace/TestApp/build/Debug-iphonesimulator
+    setenv CONFIGURATION_TEMP_DIR /Users/dyang/Workspace/TestApp/build/TestApp.build/Debug-iphonesimulator
     setenv CONTENTS_FOLDER_PATH UnitTests.octest
     setenv COPYING_PRESERVES_HFS_DATA NO
     setenv COPY_PHASE_STRIP NO
@@ -71,9 +49,9 @@ PhaseScriptExecution "/Applications/Cruise Agent.app/pipelines/TestApp/build/Tes
     setenv DEBUG_INFORMATION_FORMAT dwarf-with-dsym
     setenv DEPLOYMENT_LOCATION NO
     setenv DEPLOYMENT_POSTPROCESSING NO
-    setenv DERIVED_FILES_DIR "/Applications/Cruise Agent.app/pipelines/TestApp/build/TestApp.build/Debug-iphonesimulator/UnitTests.build/DerivedSources"
-    setenv DERIVED_FILE_DIR "/Applications/Cruise Agent.app/pipelines/TestApp/build/TestApp.build/Debug-iphonesimulator/UnitTests.build/DerivedSources"
-    setenv DERIVED_SOURCES_DIR "/Applications/Cruise Agent.app/pipelines/TestApp/build/TestApp.build/Debug-iphonesimulator/UnitTests.build/DerivedSources"
+    setenv DERIVED_FILES_DIR /Users/dyang/Workspace/TestApp/build/TestApp.build/Debug-iphonesimulator/UnitTests.build/DerivedSources
+    setenv DERIVED_FILE_DIR /Users/dyang/Workspace/TestApp/build/TestApp.build/Debug-iphonesimulator/UnitTests.build/DerivedSources
+    setenv DERIVED_SOURCES_DIR /Users/dyang/Workspace/TestApp/build/TestApp.build/Debug-iphonesimulator/UnitTests.build/DerivedSources
     setenv DEVELOPER_APPLICATIONS_DIR /Developer/Applications
     setenv DEVELOPER_BIN_DIR /Developer/usr/bin
     setenv DEVELOPER_DIR /Developer
@@ -88,7 +66,7 @@ PhaseScriptExecution "/Applications/Cruise Agent.app/pipelines/TestApp/build/Tes
     setenv DO_HEADER_SCANNING_IN_JAM NO
     setenv DSTROOT /tmp/TestApp.dst
     setenv DWARF_DSYM_FILE_NAME UnitTests.octest.dSYM
-    setenv DWARF_DSYM_FOLDER_PATH "/Applications/Cruise Agent.app/pipelines/TestApp/build/Debug-iphonesimulator"
+    setenv DWARF_DSYM_FOLDER_PATH /Users/dyang/Workspace/TestApp/build/Debug-iphonesimulator
     setenv EFFECTIVE_PLATFORM_NAME -iphonesimulator
     setenv ENABLE_HEADER_DEPENDENCIES YES
     setenv ENABLE_OPENMP_SUPPORT NO
@@ -97,11 +75,11 @@ PhaseScriptExecution "/Applications/Cruise Agent.app/pipelines/TestApp/build/Tes
     setenv EXECUTABLE_FOLDER_PATH UnitTests.octest
     setenv EXECUTABLE_NAME UnitTests
     setenv EXECUTABLE_PATH UnitTests.octest/UnitTests
-    setenv FILE_LIST "/Applications/Cruise Agent.app/pipelines/TestApp/build/TestApp.build/Debug-iphonesimulator/UnitTests.build/Objects/LinkFileList"
-    setenv FIXED_FILES_DIR "/Applications/Cruise Agent.app/pipelines/TestApp/build/TestApp.build/Debug-iphonesimulator/UnitTests.build/FixedFiles"
+    setenv FILE_LIST /Users/dyang/Workspace/TestApp/build/TestApp.build/Debug-iphonesimulator/UnitTests.build/Objects/LinkFileList
+    setenv FIXED_FILES_DIR /Users/dyang/Workspace/TestApp/build/TestApp.build/Debug-iphonesimulator/UnitTests.build/FixedFiles
     setenv FRAMEWORKS_FOLDER_PATH UnitTests.octest/Frameworks
     setenv FRAMEWORK_FLAG_PREFIX -framework
-    setenv FRAMEWORK_SEARCH_PATHS "\"/Applications/Cruise Agent.app/pipelines/TestApp/build/Debug-iphonesimulator\" /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.1.2.sdk/Developer/Library/Frameworks /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.1.2.sdk/Developer/Library/Frameworks"
+    setenv FRAMEWORK_SEARCH_PATHS "/Users/dyang/Workspace/TestApp/build/Debug-iphonesimulator /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.1.2.sdk/Developer/Library/Frameworks /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.1.2.sdk/Developer/Library/Frameworks"
     setenv FRAMEWORK_VERSION A
     setenv FULL_PRODUCT_NAME UnitTests.octest
     setenv GCC3_VERSION 3.3
@@ -127,7 +105,7 @@ PhaseScriptExecution "/Applications/Cruise Agent.app/pipelines/TestApp/build/Tes
     setenv HEADERMAP_INCLUDES_FRAMEWORK_ENTRIES_FOR_ALL_PRODUCT_TYPES YES
     setenv HEADERMAP_INCLUDES_NONPUBLIC_NONPRIVATE_HEADERS YES
     setenv HEADERMAP_INCLUDES_PROJECT_HEADERS YES
-    setenv HEADER_SEARCH_PATHS "\"/Applications/Cruise Agent.app/pipelines/TestApp/build/Debug-iphonesimulator/include\" "
+    setenv HEADER_SEARCH_PATHS "\"/Users/dyang/Workspace/TestApp/build/Debug-iphonesimulator/include\" "
     setenv ICONV /usr/bin/iconv
     setenv INFOPLIST_EXPAND_BUILD_SETTINGS YES
     setenv INFOPLIST_FILE UnitTests-Info.plist
@@ -155,14 +133,14 @@ PhaseScriptExecution "/Applications/Cruise Agent.app/pipelines/TestApp/build/Tes
     setenv JIKES_DEFAULT_FLAGS "+E +OLDCSO"
     setenv KEEP_PRIVATE_EXTERNS NO
     setenv LD_GENERATE_MAP_FILE NO
-    setenv LD_MAP_FILE_PATH "/Applications/Cruise Agent.app/pipelines/TestApp/build/TestApp.build/Debug-iphonesimulator/UnitTests.build/UnitTests-LinkMap-normal-i386.txt"
+    setenv LD_MAP_FILE_PATH /Users/dyang/Workspace/TestApp/build/TestApp.build/Debug-iphonesimulator/UnitTests.build/UnitTests-LinkMap-normal-i386.txt
     setenv LD_OPENMP_FLAGS -fopenmp
     setenv LEX /Developer/usr/bin/lex
     setenv LIBRARY_FLAG_NOSPACE YES
     setenv LIBRARY_FLAG_PREFIX -l
-    setenv LIBRARY_SEARCH_PATHS "\"/Applications/Cruise Agent.app/pipelines/TestApp/build/Debug-iphonesimulator\" "
+    setenv LIBRARY_SEARCH_PATHS "\"/Users/dyang/Workspace/TestApp/build/Debug-iphonesimulator\" "
     setenv LINKER_DISPLAYS_MANGLED_NAMES NO
-    setenv LINK_FILE_LIST_normal_i386 "/Applications/Cruise Agent.app/pipelines/TestApp/build/TestApp.build/Debug-iphonesimulator/UnitTests.build/Objects-normal/i386/UnitTests.LinkFileList"
+    setenv LINK_FILE_LIST_normal_i386 /Users/dyang/Workspace/TestApp/build/TestApp.build/Debug-iphonesimulator/UnitTests.build/Objects-normal/i386/UnitTests.LinkFileList
     setenv LINK_WITH_STANDARD_LIBRARIES YES
     setenv LOCAL_ADMIN_APPS_DIR /Applications/Utilities
     setenv LOCAL_APPS_DIR /Applications
@@ -178,9 +156,9 @@ PhaseScriptExecution "/Applications/Cruise Agent.app/pipelines/TestApp/build/Tes
     setenv NATIVE_ARCH_64_BIT x86_64
     setenv NATIVE_ARCH_ACTUAL x86_64
     setenv NO_COMMON YES
-    setenv OBJECT_FILE_DIR "/Applications/Cruise Agent.app/pipelines/TestApp/build/TestApp.build/Debug-iphonesimulator/UnitTests.build/Objects"
-    setenv OBJECT_FILE_DIR_normal "/Applications/Cruise Agent.app/pipelines/TestApp/build/TestApp.build/Debug-iphonesimulator/UnitTests.build/Objects-normal"
-    setenv OBJROOT "/Applications/Cruise Agent.app/pipelines/TestApp/build"
+    setenv OBJECT_FILE_DIR /Users/dyang/Workspace/TestApp/build/TestApp.build/Debug-iphonesimulator/UnitTests.build/Objects
+    setenv OBJECT_FILE_DIR_normal /Users/dyang/Workspace/TestApp/build/TestApp.build/Debug-iphonesimulator/UnitTests.build/Objects-normal
+    setenv OBJROOT /Users/dyang/Workspace/TestApp/build
     setenv ONLY_ACTIVE_ARCH NO
     setenv OPTIMIZATION_LEVEL 0
     setenv OS MACOS
@@ -188,11 +166,11 @@ PhaseScriptExecution "/Applications/Cruise Agent.app/pipelines/TestApp/build/Tes
     setenv OTHER_LDFLAGS "-framework Foundation -framework SenTestingKit -framework UIKit"
     setenv PACKAGE_TYPE com.apple.package-type.wrapper
     setenv PASCAL_STRINGS YES
-    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"
+    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin:/opt/groovy-1.7.3/bin"
     setenv PATH_PREFIXES_EXCLUDED_FROM_HEADER_DEPENDENCIES "/usr/include /usr/local/include /System/Library/Frameworks /System/Library/PrivateFrameworks /Developer/Headers"
     setenv PBDEVELOPMENTPLIST_PATH UnitTests.octest/pbdevelopment.plist
     setenv PFE_FILE_C_DIALECTS objective-c
-    setenv PKGINFO_FILE_PATH "/Applications/Cruise Agent.app/pipelines/TestApp/build/TestApp.build/Debug-iphonesimulator/UnitTests.build/PkgInfo"
+    setenv PKGINFO_FILE_PATH /Users/dyang/Workspace/TestApp/build/TestApp.build/Debug-iphonesimulator/UnitTests.build/PkgInfo
     setenv PKGINFO_PATH UnitTests.octest/PkgInfo
     setenv PLATFORM_DEVELOPER_APPLICATIONS_DIR /Developer/Platforms/iPhoneSimulator.platform/Developer/Applications
     setenv PLATFORM_DEVELOPER_BIN_DIR /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin
@@ -206,26 +184,26 @@ PhaseScriptExecution "/Applications/Cruise Agent.app/pipelines/TestApp/build/Tes
     setenv PLUGINS_FOLDER_PATH UnitTests.octest/PlugIns
     setenv PREBINDING NO
     setenv PRECOMPS_INCLUDE_HEADERS_FROM_BUILT_PRODUCTS_DIR YES
-    setenv PRECOMP_DESTINATION_DIR "/Applications/Cruise Agent.app/pipelines/TestApp/build/TestApp.build/Debug-iphonesimulator/UnitTests.build/PrefixHeaders"
+    setenv PRECOMP_DESTINATION_DIR /Users/dyang/Workspace/TestApp/build/TestApp.build/Debug-iphonesimulator/UnitTests.build/PrefixHeaders
     setenv PRESERVE_DEAD_CODE_INITS_AND_TERMS NO
     setenv PRIVATE_HEADERS_FOLDER_PATH UnitTests.octest/PrivateHeaders
     setenv PRODUCT_NAME UnitTests
-    setenv PRODUCT_SETTINGS_PATH "/Applications/Cruise Agent.app/pipelines/TestApp/UnitTests-Info.plist"
+    setenv PRODUCT_SETTINGS_PATH /Users/dyang/Workspace/TestApp/UnitTests-Info.plist
     setenv PRODUCT_TYPE com.apple.product-type.bundle
     setenv PROFILING_CODE NO
     setenv PROJECT TestApp
-    setenv PROJECT_DERIVED_FILE_DIR "/Applications/Cruise Agent.app/pipelines/TestApp/build/TestApp.build/DerivedSources"
-    setenv PROJECT_DIR "/Applications/Cruise Agent.app/pipelines/TestApp"
-    setenv PROJECT_FILE_PATH "/Applications/Cruise Agent.app/pipelines/TestApp/TestApp.xcodeproj"
+    setenv PROJECT_DERIVED_FILE_DIR /Users/dyang/Workspace/TestApp/build/TestApp.build/DerivedSources
+    setenv PROJECT_DIR /Users/dyang/Workspace/TestApp
+    setenv PROJECT_FILE_PATH /Users/dyang/Workspace/TestApp/TestApp.xcodeproj
     setenv PROJECT_NAME TestApp
-    setenv PROJECT_TEMP_DIR "/Applications/Cruise Agent.app/pipelines/TestApp/build/TestApp.build"
+    setenv PROJECT_TEMP_DIR /Users/dyang/Workspace/TestApp/build/TestApp.build
     setenv PUBLIC_HEADERS_FOLDER_PATH UnitTests.octest/Headers
     setenv RECURSIVE_SEARCH_PATHS_FOLLOW_SYMLINKS YES
     setenv REMOVE_CVS_FROM_RESOURCES YES
     setenv REMOVE_SVN_FROM_RESOURCES YES
-    setenv REZ_COLLECTOR_DIR "/Applications/Cruise Agent.app/pipelines/TestApp/build/TestApp.build/Debug-iphonesimulator/UnitTests.build/ResourceManagerResources"
-    setenv REZ_OBJECTS_DIR "/Applications/Cruise Agent.app/pipelines/TestApp/build/TestApp.build/Debug-iphonesimulator/UnitTests.build/ResourceManagerResources/Objects"
-    setenv REZ_SEARCH_PATHS "\"/Applications/Cruise Agent.app/pipelines/TestApp/build/Debug-iphonesimulator\" "
+    setenv REZ_COLLECTOR_DIR /Users/dyang/Workspace/TestApp/build/TestApp.build/Debug-iphonesimulator/UnitTests.build/ResourceManagerResources
+    setenv REZ_OBJECTS_DIR /Users/dyang/Workspace/TestApp/build/TestApp.build/Debug-iphonesimulator/UnitTests.build/ResourceManagerResources/Objects
+    setenv REZ_SEARCH_PATHS "\"/Users/dyang/Workspace/TestApp/build/Debug-iphonesimulator\" "
     setenv SCAN_ALL_SOURCE_FILES_FOR_INCLUDES NO
     setenv SCRIPTS_FOLDER_PATH UnitTests.octest/Scripts
     setenv SCRIPT_INPUT_FILE_COUNT 0
@@ -239,19 +217,19 @@ PhaseScriptExecution "/Applications/Cruise Agent.app/pipelines/TestApp/build/Tes
     setenv SET_DIR_MODE_OWNER_GROUP YES
     setenv SET_FILE_MODE_OWNER_GROUP NO
     setenv SHALLOW_BUNDLE YES
-    setenv SHARED_DERIVED_FILE_DIR "/Applications/Cruise Agent.app/pipelines/TestApp/build/Debug-iphonesimulator/DerivedSources"
+    setenv SHARED_DERIVED_FILE_DIR /Users/dyang/Workspace/TestApp/build/Debug-iphonesimulator/DerivedSources
     setenv SHARED_FRAMEWORKS_FOLDER_PATH UnitTests.octest/SharedFrameworks
     setenv SHARED_PRECOMPS_DIR /var/folders/Qw/QwcNQu74FcKZavbIZYNLcE+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders
     setenv SHARED_SUPPORT_FOLDER_PATH UnitTests.octest/SharedSupport
     setenv SKIP_INSTALL YES
-    setenv SOURCE_ROOT "/Applications/Cruise Agent.app/pipelines/TestApp"
-    setenv SRCROOT "/Applications/Cruise Agent.app/pipelines/TestApp"
+    setenv SOURCE_ROOT /Users/dyang/Workspace/TestApp
+    setenv SRCROOT /Users/dyang/Workspace/TestApp
     setenv STANDARD_C_PLUS_PLUS_LIBRARY_TYPE dynamic
     setenv STRINGS_FILE_OUTPUT_ENCODING binary
     setenv STRIP_INSTALLED_PRODUCT YES
     setenv STRIP_STYLE non-global
-    setenv SYMBOL_REPOSITORY_DIR "/Applications/Cruise Agent.app/pipelines/TestApp/build/TestApp.build/Debug-iphonesimulator/UnitTests.build/SymbolRepositories"
-    setenv SYMROOT "/Applications/Cruise Agent.app/pipelines/TestApp/build"
+    setenv SYMBOL_REPOSITORY_DIR /Users/dyang/Workspace/TestApp/build/TestApp.build/Debug-iphonesimulator/UnitTests.build/SymbolRepositories
+    setenv SYMROOT /Users/dyang/Workspace/TestApp/build
     setenv SYSTEM_ADMIN_APPS_DIR /Applications/Utilities
     setenv SYSTEM_APPS_DIR /Applications
     setenv SYSTEM_CORE_SERVICES_DIR /System/Library/CoreServices
@@ -273,13 +251,13 @@ PhaseScriptExecution "/Applications/Cruise Agent.app/pipelines/TestApp/build/Tes
     setenv SYSTEM_DOCUMENTATION_DIR /Library/Documentation
     setenv SYSTEM_LIBRARY_DIR /System/Library
     setenv TARGETNAME UnitTests
-    setenv TARGET_BUILD_DIR "/Applications/Cruise Agent.app/pipelines/TestApp/build/Debug-iphonesimulator"
+    setenv TARGET_BUILD_DIR /Users/dyang/Workspace/TestApp/build/Debug-iphonesimulator
     setenv TARGET_NAME UnitTests
-    setenv TARGET_TEMP_DIR "/Applications/Cruise Agent.app/pipelines/TestApp/build/TestApp.build/Debug-iphonesimulator/UnitTests.build"
-    setenv TEMP_DIR "/Applications/Cruise Agent.app/pipelines/TestApp/build/TestApp.build/Debug-iphonesimulator/UnitTests.build"
-    setenv TEMP_FILES_DIR "/Applications/Cruise Agent.app/pipelines/TestApp/build/TestApp.build/Debug-iphonesimulator/UnitTests.build"
-    setenv TEMP_FILE_DIR "/Applications/Cruise Agent.app/pipelines/TestApp/build/TestApp.build/Debug-iphonesimulator/UnitTests.build"
-    setenv TEMP_ROOT "/Applications/Cruise Agent.app/pipelines/TestApp/build"
+    setenv TARGET_TEMP_DIR /Users/dyang/Workspace/TestApp/build/TestApp.build/Debug-iphonesimulator/UnitTests.build
+    setenv TEMP_DIR /Users/dyang/Workspace/TestApp/build/TestApp.build/Debug-iphonesimulator/UnitTests.build
+    setenv TEMP_FILES_DIR /Users/dyang/Workspace/TestApp/build/TestApp.build/Debug-iphonesimulator/UnitTests.build
+    setenv TEMP_FILE_DIR /Users/dyang/Workspace/TestApp/build/TestApp.build/Debug-iphonesimulator/UnitTests.build
+    setenv TEMP_ROOT /Users/dyang/Workspace/TestApp/build
     setenv UID 501
     setenv UNLOCALIZED_RESOURCES_FOLDER_PATH UnitTests.octest
     setenv UNSTRIPPED_PRODUCT NO
@@ -303,38 +281,33 @@ PhaseScriptExecution "/Applications/Cruise Agent.app/pipelines/TestApp/build/Tes
     setenv XCODE_VERSION_MAJOR 0300
     setenv XCODE_VERSION_MINOR 0310
     setenv YACC /Developer/usr/bin/yacc
-    /bin/sh -c "\"/Applications/Cruise Agent.app/pipelines/TestApp/build/TestApp.build/Debug-iphonesimulator/UnitTests.build/Script-E63CBCAC11F714E800E644C0.sh\""
+    /bin/sh -c /Users/dyang/Workspace/TestApp/build/TestApp.build/Debug-iphonesimulator/UnitTests.build/Script-E63CBCAC11F714E800E644C0.sh
 /Developer/Tools/RunPlatformUnitTests.include:364: note: Started tests for architectures 'i386'
 /Developer/Tools/RunPlatformUnitTests.include:371: note: Running tests for architecture 'i386' (GC OFF)
-objc[4495]: GC: forcing GC OFF because OBJC_DISABLE_GC is set
-objc[4495]: GC: forcing GC OFF because OBJC_DISABLE_GC is set
-Test Suite '/Applications/Cruise Agent.app/pipelines/TestApp/build/Debug-iphonesimulator/UnitTests.octest(Tests)' started at 2010-07-21 20:53:59 +0800
-Test Suite 'DummyTests' started at 2010-07-21 20:53:59 +0800
-/Applications/Cruise Agent.app/pipelines/TestApp/DummyTests.m:21: error: -[DummyTests testFail] : Fail me
-** BUILD FAILED **
-
-The following build commands failed:
-UnitTests:
-	PhaseScriptExecution "/Applications/Cruise Agent.app/pipelines/TestApp/build/TestApp.build/Debug-iphonesimulator/UnitTests.build/Script-E63CBCAC11F714E800E644C0.sh"
-(1 failure)
-
+objc[11121]: GC: forcing GC OFF because OBJC_DISABLE_GC is set
+objc[11121]: GC: forcing GC OFF because OBJC_DISABLE_GC is set
+Test Suite '/Users/dyang/Workspace/TestApp/build/Debug-iphonesimulator/UnitTests.octest(Tests)' started at 2010-07-21 23:46:58 +0800
+Test Suite 'DummyTests' started at 2010-07-21 23:46:58 +0800
+/Users/dyang/Workspace/TestApp/DummyTests.m:21: error: -[DummyTests testFail] : Fail me
 Test Case '-[DummyTests testFail]' failed (0.000 seconds).
-/Applications/Cruise Agent.app/pipelines/TestApp/DummyTests.m:16: error: -[DummyTests testNumber] : '1' should be equal to '2': This is simple
-Test Case '-[DummyTests testNumber]' failed (0.000 seconds).
-Test Case '-[DummyTests testString]' passed (0.000 seconds).
+Test Case '-[DummyTests testNumber]' passed (0.002 seconds).
+Test Case '-[DummyTests testString]' passed (0.001 seconds).
 Test Case '-[DummyTests testStringLength]' passed (0.000 seconds).
-Test Suite 'DummyTests' finished at 2010-07-21 20:53:59 +0800.
-Executed 4 tests, with 2 failures (0 unexpected) in 0.000 (0.001) seconds
+Test Suite 'DummyTests' finished at 2010-07-21 23:46:58 +0800.
+tests_errors[0]
+Fail me
+tests_errors[1]
+/Users/dyang/Workspace/TestApp/DummyTests.m:21
+Executed 4 tests, with 1 failure (0 unexpected) in 0.000 (0.001) seconds
 
-Test Suite '/Applications/Cruise Agent.app/pipelines/TestApp/build/Debug-iphonesimulator/UnitTests.octest(Tests)' finished at 2010-07-21 20:53:59 +0800.
-Executed 4 tests, with 2 failures (0 unexpected) in 0.000 (0.011) seconds
+Test Suite 'SimpleTests' started at 2010-07-21 23:46:58 +0800
+Test Case '-[SimpleTests testNumber]' passed (0.010 seconds).
+Test Case '-[SimpleTests testString]' passed (0.020 seconds).
+Test Suite 'SimpleTests' finished at 2010-07-21 23:46:58 +0800.
+Executed 2 tests, with 0 failures (0 unexpected) in 0.000 (0.000) seconds
+
+Test Suite '/Users/dyang/Workspace/TestApp/build/Debug-iphonesimulator/UnitTests.octest(Tests)' finished at 2010-07-21 23:46:58 +0800.
+Executed 6 tests, with 1 failure (0 unexpected) in 0.000 (0.002) seconds
 
 /Developer/Tools/RunPlatformUnitTests.include:390: error: Failed tests for architecture 'i386' (GC OFF)
 /Developer/Tools/RunPlatformUnitTests.include:399: note: Completed tests for architectures 'i386'
-
-Touch "/Applications/Cruise Agent.app/pipelines/TestApp/build/Debug-iphonesimulator/UnitTests.octest"
-    cd "/Applications/Cruise Agent.app/pipelines/TestApp"
-    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"
-    /usr/bin/touch -c "/Applications/Cruise Agent.app/pipelines/TestApp/build/Debug-iphonesimulator/UnitTests.octest"
-
-
