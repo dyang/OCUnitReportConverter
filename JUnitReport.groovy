@@ -9,8 +9,19 @@ class JUnitReport {
 
 	void toXml() {
 		new File(REPORTS_DIR).mkdir()
-		testSuites.each {
-			new File(REPORTS_DIR, "TEST-${it.name}.xml").write("")
+		testSuites.each { suite ->
+			def xml = new groovy.xml.StreamingMarkupBuilder().bind {
+				mkp.xmlDeclaration()
+				testSuite(name: suite.name,
+					tests: suite.numberOfTests,
+					errors: suite.numberOfErrors,
+					failures: suite.numberOfFailures,
+					time: suite.time,
+					timestamp: suite.timestamp) {
+						
+					}
+			}
+			new File(REPORTS_DIR, "TEST-${suite.name}.xml").write(xml.toString())
 		}
 	}
 }

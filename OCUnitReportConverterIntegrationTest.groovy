@@ -18,4 +18,16 @@ class OCUnitReportConverterIntegrationTest extends GroovyTestCase {
 		assertTrue "[TEST-DummyTests.xml] should be created", new File("test-reports", "TEST-DummyTests.xml").exists()
 		assertTrue "[TEST-SimpleTests.xml] should be created", new File("test-reports", "TEST-SimpleTests.xml").exists()
 	}
+
+	void testShouldWriteOCUnitResultIntoJUnitReport() {
+		converter.parse(outputTwoSuitesTwoFail).toXml()
+
+		def testSuite = new XmlParser().parse("test-reports/TEST-DummyTests.xml")
+		assertEquals 5, testSuite.@tests as int
+		assertEquals 0, testSuite.@errors.toInteger()
+		assertEquals 2, testSuite.@failures.toInteger()
+		assertEquals "DummyTests", testSuite.@name
+		assertEquals 0.001f, testSuite.@time as float
+		assertEquals "2010-07-25 15:45:56 +0800", testSuite.@timestamp
+	}
 }
