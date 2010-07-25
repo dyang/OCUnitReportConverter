@@ -4,11 +4,14 @@ class OCUnitReportConverter {
     final String LINE_BREAK = System.getProperty("line.separator")
 
     def parse(String ocunitOutput) {
-       
-        def testSuites = []
         def expSuite = /^Test Suite '([^']+)' started at (.*)/
         def expTestCount = /^Executed ([\d]+) tests, with ([\d]+) failure[s]? \([\d]+ unexpected\) in [\S]+ \(([^\)]+)\).*/
         def expTestCase = /^Test Case '-[\S]+ ([^\]]+)\]' (passed|failed) \(([\S]*) seconds\).*/
+		def expTestFailure = /(.+): error: -\[[^]]+\] : (.*)/
+		
+		def testSuites = []
+		def lastFailureCallstack
+		def lastFailureMessage
         
         ocunitOutput.split(LINE_BREAK).each {
             switch (it) {
@@ -27,10 +30,22 @@ class OCUnitReportConverter {
 						testSuites[-1].time = matcher[0][3] as float
 					testSuites[-1].numberOfErrors = 0
                     break
+				case ~expTestFailure:
+					def matcher = Matcher.getLastMatcher()
+					lastFailureCallstack = matcher[0][1]
+					lastFailureMessage = matcher[0][2]
+					break
 				case ~expTestCase:
 					def matcher = Matcher.getLastMatcher()
 					def passed = matcher[0][2] == "passed" ? true : false
-					testSuites[-1].testCases << new TestCase(name: matcher[0][1], passed: passed, time: matcher[0][3] as float)
+					def testCase = new TestCase(name: matcher[0][1], passed: passed, time: matcher[0][3] as float)
+					if (!passed) {
+						def failure = new Failure(message: lastFailureMessage, callstack: lastFailureCallstack)
+						testCase.failure = failure
+						lastFailureMessage = null
+						lastFailureCallstack = null
+					}
+					testSuites[-1].testCases << testCase
 					break
             }        
         }

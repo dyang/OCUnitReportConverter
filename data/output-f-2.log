@@ -304,7 +304,7 @@ objc[1255]: GC: forcing GC OFF because OBJC_DISABLE_GC is set
 objc[1255]: GC: forcing GC OFF because OBJC_DISABLE_GC is set
 Test Suite '/Users/dyang/Workspace/TestApp/build/Debug-iphonesimulator/UnitTests.octest(Tests)' started at 2010-07-25 15:45:56 +0800
 Test Suite 'DummyTests' started at 2010-07-25 15:45:56 +0800
-/Users/dyang/Workspace/TestApp/DummyTests.m:39: error: -[DummyTests testFail2] : "FALSE" should be true. Fale is not true
+/Users/dyang/Workspace/TestApp/DummyTests.m:39: error: -[DummyTests testFail2] : "FALSE" should be true. False is not true
 Test Case '-[DummyTests testFail2]' failed (0.000 seconds).
 Test Case '-[DummyTests testNumber]' passed (0.000 seconds).
 Test Case '-[DummyTests testString]' passed (0.000 seconds).

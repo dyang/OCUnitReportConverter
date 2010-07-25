@@ -82,4 +82,18 @@ class OCUnitReportConverterTest extends GroovyTestCase {
 		assertEquals true, result.testSuites[1].testCases[0].passed
 		assertEquals true, result.testSuites[1].testCases[1].passed
 	}
+
+	void testShouldParseFailureMessage() {
+		def result = converter.parse(outputTwoSuitesTwoFail)
+		assertEquals 'testFail2', result.testSuites[0].testCases[0].name
+		assertEquals '"FALSE" should be true. False is not true', result.testSuites[0].testCases[0].failure.message
+		assertEquals 'testxFail1', result.testSuites[0].testCases[4].name
+		assertEquals '"TRUE" should be false. True is not false', result.testSuites[0].testCases[4].failure.message
+	}
+
+	void testShouldParseFailureCallstack() {
+		def result = converter.parse(outputTwoSuitesTwoFail)
+		assertEquals '/Users/dyang/Workspace/TestApp/DummyTests.m:39', result.testSuites[0].testCases[0].failure.callstack
+		assertEquals '/Users/dyang/Workspace/TestApp/DummyTests.m:34', result.testSuites[0].testCases[4].failure.callstack
+	}
 }
