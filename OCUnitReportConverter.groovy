@@ -8,7 +8,7 @@ class OCUnitReportConverter {
         def expTestCount = /^Executed ([\d]+) tests, with ([\d]+) failure[s]? \([\d]+ unexpected\) in [\S]+ \(([^\)]+)\).*/
         def expTestCase = /^Test Case '-[\S]+ ([^\]]+)\]' (passed|failed) \(([\S]*) seconds\).*/
 		def expTestFailure = /(.+): error: -\[[^]]+\] : (.*)/
-		
+
 		def testSuites = []
 		def lastFailureCallstack
 		def lastFailureMessage
