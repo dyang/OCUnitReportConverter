@@ -12,13 +12,16 @@ class JUnitReport {
 		testSuites.each { suite ->
 			def xml = new groovy.xml.StreamingMarkupBuilder().bind {
 				mkp.xmlDeclaration()
-				testSuite(name: suite.name,
-					tests: suite.numberOfTests,
-					errors: suite.numberOfErrors,
-					failures: suite.numberOfFailures,
-					time: suite.time,
-					timestamp: suite.timestamp) {
-						
+				testsuite(name: suite.name, tests: suite.numberOfTests,
+					errors: suite.numberOfErrors, failures: suite.numberOfFailures,
+					time: suite.time, timestamp: suite.timestamp) {
+						suite.testCases.each { testCase ->
+							testcase(classname: suite.name, name: testCase.name, time: testCase.time) {
+									if (testCase.failure) {
+										failure(message: testCase.failure.message, type: testCase.failure.type, testCase.failure.callstack)
+									}
+							}
+						}
 					}
 			}
 			new File(REPORTS_DIR, "TEST-${suite.name}.xml").write(xml.toString())
